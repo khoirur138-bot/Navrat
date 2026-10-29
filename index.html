@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modul belajar interaktif Navigasi Darat Saka Wira Kartika: peta, medan, kompas, azimut, resection, intersection, GPS, latihan dan kuis.">
+  <title>NAVRAT — Navigasi Darat Saka Wira Kartika</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="NAVRAT beranda">
+      <span class="brand-mark">N<span>↗</span></span>
+      <span><strong>NAVRAT</strong><small>FIELD LEARNING HUB</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#peta">Peta & Medan</a><a href="#kompas">Kompas</a><a href="#teknik">Teknik</a><a href="#gps">GPS</a><a href="#latihan">Latihan</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">◐ <span>Tema</span></button>
+  </header>
+
+  <main id="beranda">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> MODUL PEMBELAJARAN • SAKA WIRA KARTIKA</div>
+        <h1>Kenali medan.<br><em>Tentukan arah.</em><br>Temukan posisi.</h1>
+        <p class="hero-lead">Panduan belajar Navigasi Darat dari dasar sampai praktik: membaca peta, menggunakan kompas, menghitung azimut, menentukan posisi, dan memanfaatkan GPS secara bertanggung jawab.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#peta">Mulai belajar <span>↘</span></a><a class="btn btn-ghost" href="#silabus">Lihat peta materi</a></div>
+        <div class="hero-meta"><span><b>04</b> kompetensi SKK</span><span><b>08+</b> modul inti</span><span><b>01</b> kuis interaktif</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustrasi kompas dan peta topografi">
+        <div class="contour contour-one"></div><div class="contour contour-two"></div><div class="contour contour-three"></div>
+        <div class="map-label label-a">PUNCAK 842 m</div><div class="map-label label-b">POS 02</div>
+        <div class="route-line"></div>
+        <div class="compass-art"><div class="compass-ring"><span class="north">N</span><span class="east">E</span><span class="south">S</span><span class="west">W</span><div class="needle"></div><div class="hub"></div></div></div>
+        <div class="coordinate-card"><small>KOORDINAT CONTOH</small><strong>07° 32′ 18″ S</strong><strong>112° 14′ 06″ E</strong><span>SIMULASI PEMBELAJARAN</span></div>
+        <div class="visual-stamp">MAP<br>+<br>COMPASS</div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Prinsip navigasi">
+      <div><span class="strip-number">01</span><strong>Amati</strong><small>Kenali tanda medan</small></div>
+      <div><span class="strip-number">02</span><strong>Orientasikan</strong><small>Samakan peta dengan medan</small></div>
+      <div><span class="strip-number">03</span><strong>Hitung</strong><small>Arah, jarak, dan posisi</small></div>
+      <div><span class="strip-number">04</span><strong>Verifikasi</strong><small>Cocokkan beberapa petunjuk</small></div>
+    </section>
+
+    <section class="section intro-section" id="silabus">
+      <div class="section-kicker">01 / PETA BELAJAR</div>
+      <div class="section-heading"><div><h2>Materi yang akan kamu kuasai</h2><p>Disusun mengikuti empat kelompok kompetensi yang umum dicantumkan dalam Krida Navigasi Darat Saka Wira Kartika. Pelaksanaan dan syarat pengujian tetap mengikuti panduan resmi yang berlaku di pangkalan.</p></div><div class="progress-wrap"><div class="progress-label"><span>Progres membaca</span><b id="progressText">0%</b></div><div class="progress-track"><div id="progressBar"></div></div></div></div>
+      <div class="module-grid">
+        <a class="module-card" href="#peta"><span class="module-index">01</span><span class="module-icon">⌖</span><h3>Pengetahuan Peta & Medan</h3><p>Jenis peta, legenda, skala, kontur, koordinat, dan analisis medan.</p><span class="module-link">Pelajari modul <b>↗</b></span></a>
+        <a class="module-card" href="#kompas"><span class="module-index">02</span><span class="module-icon">✥</span><h3>Kompas Siang & Malam</h3><p>Bagian kompas, arah mata angin, azimut, orientasi, dan keselamatan.</p><span class="module-link">Pelajari modul <b>↗</b></span></a>
+        <a class="module-card" href="#teknik"><span class="module-index">03</span><span class="module-icon">⌁</span><h3>Resection & Intersection</h3><p>Membedakan penentuan posisi sendiri dan penentuan titik sasaran.</p><span class="module-link">Pelajari modul <b>↗</b></span></a>
+        <a class="module-card" href="#gps"><span class="module-index">04</span><span class="module-icon">◎</span><h3>Global Positioning System</h3><p>Koordinat, waypoint, track, akurasi, dan penggunaan GPS secara bijak.</p><span class="module-link">Pelajari modul <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section class="section content-section" id="peta">
+      <div class="section-kicker">02 / KOMPETENSI DASAR</div>
+      <div class="content-layout">
+        <aside class="side-note"><span class="side-number">A</span><h3>Pengetahuan<br>peta & medan</h3><p>Peta adalah representasi permukaan bumi pada bidang datar dengan skala, simbol, dan sistem referensi tertentu.</p><div class="note-chip">KUNCI: BACA SEBELUM BERGERAK</div></aside>
+        <div class="article-content">
+          <h2>Memahami peta sebagai gambaran medan</h2>
+          <p>Navigasi darat adalah proses merencanakan dan mengikuti perjalanan di daratan dengan menentukan arah, posisi, jarak, serta mengenali kondisi medan. Navigasi yang baik tidak bergantung pada satu alat saja: peta, kompas, pengamatan, catatan perjalanan, dan GPS saling melengkapi.</p>
+          <h3>1. Fungsi peta</h3>
+          <ul><li>Menunjukkan lokasi relatif suatu tempat terhadap tempat lain.</li><li>Menggambarkan bentuk medan, jaringan sungai, jalan, permukiman, dan objek penting.</li><li>Membantu memperkirakan jarak, ketinggian, kemiringan, serta pilihan rute.</li><li>Menjadi alat komunikasi posisi saat perencanaan perjalanan atau kegiatan pencarian dan pertolongan.</li></ul>
+          <h3>2. Jenis peta yang perlu dikenal</h3>
+          <div class="table-wrap"><table><thead><tr><th>Jenis</th><th>Ciri utama</th><th>Kegunaan</th></tr></thead><tbody>
+            <tr><td><b>Peta topografi</b></td><td>Menampilkan relief melalui garis kontur serta unsur alam dan buatan.</td><td>Analisis medan, ketinggian, dan perencanaan rute.</td></tr>
+            <tr><td><b>Peta tematik</b></td><td>Menonjolkan satu tema, misalnya tutupan lahan atau curah hujan.</td><td>Memahami informasi khusus suatu wilayah.</td></tr>
+            <tr><td><b>Peta administrasi</b></td><td>Menunjukkan batas wilayah dan nama administratif.</td><td>Orientasi wilayah dan referensi lokasi.</td></tr>
+            <tr><td><b>Peta digital</b></td><td>Disajikan melalui aplikasi atau perangkat elektronik.</td><td>Perencanaan, pencarian lokasi, dan navigasi; perlu memeriksa sumber dan tanggal datanya.</td></tr>
+          </tbody></table></div>
+          <h3>3. Bagian peta yang wajib diperiksa</h3>
+          <div class="check-grid"><div><b>Judul & cakupan</b><p>Pastikan peta mencakup area kegiatan yang benar.</p></div><div><b>Skala</b><p>Hubungan jarak di peta dengan jarak di lapangan.</p></div><div><b>Legenda</b><p>Arti simbol, warna, garis, dan tanda.</p></div><div><b>Orientasi & grid</b><p>Petunjuk utara dan sistem koordinat/grid.</p></div><div><b>Kontur</b><p>Informasi bentuk serta ketinggian medan.</p></div><div><b>Edisi & sumber</b><p>Tanggal, pembuat, datum, dan proyeksi jika tersedia.</p></div></div>
+          <h3>4. Skala dan perhitungan jarak</h3>
+          <p>Skala angka 1:25.000 berarti 1 satuan pada peta mewakili 25.000 satuan yang sama di lapangan.</p>
+          <div class="formula-card"><small>RUMUS DASAR</small><div>Jarak lapangan = jarak peta × penyebut skala</div><p>Contoh: pada peta 1:25.000, jarak lurus 4 cm di peta = 4 × 25.000 cm = 100.000 cm = <b>1 km</b> di lapangan.</p></div>
+          <p><b>Ingat:</b> jarak di peta biasanya jarak horizontal/lurus. Jarak tempuh sebenarnya dapat lebih panjang karena jalan berkelok, lereng, sungai, vegetasi, dan hambatan lain.</p>
+          <h3>5. Garis kontur dan bentuk medan</h3>
+          <p>Garis kontur menghubungkan titik-titik dengan ketinggian yang sama. Interval kontur adalah beda tinggi antara dua garis kontur berurutan dan perlu dibaca dari informasi peta, bukan ditebak.</p>
+          <div class="terrain-grid">
+            <div class="terrain-item"><div class="contour-mini hill"></div><b>Kontur rapat</b><span>Lereng relatif curam.</span></div>
+            <div class="terrain-item"><div class="contour-mini slope"></div><b>Kontur renggang</b><span>Lereng relatif landai.</span></div>
+            <div class="terrain-item"><div class="contour-mini valley"></div><b>Bentuk V/U</b><span>Dapat menandai lembah atau punggungan; tafsirkan bersama aliran sungai dan pola kontur.</span></div>
+          </div>
+          <ul><li><b>Puncak/bukit:</b> kontur tertutup; angka ketinggian membantu mengenali arah naik.</li><li><b>Lembah:</b> kontur sering membentuk huruf V yang mengarah ke hulu/ketinggian lebih tinggi.</li><li><b>Punggungan:</b> tonjolan medan memanjang yang memisahkan dua sisi lereng.</li><li><b>Sadel/pelana:</b> bagian relatif rendah di antara dua ketinggian.</li><li><b>Depresi:</b> cekungan; simbolnya bergantung pada standar peta.</li></ul>
+          <h3>6. Koordinat geografis dan grid</h3>
+          <p>Koordinat geografis memakai lintang dan bujur. Lintang diukur ke utara atau selatan khatulistiwa; bujur ke timur atau barat meridian acuan. Format umum:</p>
+          <div class="code-card"><span>Derajat-menit-detik (DMS)</span><b>07° 32′ 18″ LS, 112° 14′ 06″ BT</b><span>Derajat desimal (DD)</span><b>-7.53833, 112.23500</b></div>
+          <p>Koordinat grid pada peta memakai sistem proyeksi tertentu, misalnya UTM. Jangan mencampur format koordinat, zona, datum, atau sistem referensi. Saat membagikan posisi, sebutkan format yang digunakan dan periksa kembali angka sebelum bergerak.</p>
+          <h3>7. Membaca medan sebelum perjalanan</h3>
+          <ol><li>Tentukan titik awal, tujuan, dan titik antara yang mudah dikenali.</li><li>Periksa relief, sungai, jalan, batas vegetasi, permukiman, dan penghalang.</li><li>Perkirakan jarak serta perubahan ketinggian, bukan jarak saja.</li><li>Pilih rute yang sesuai kemampuan tim, cuaca, waktu, izin, dan kondisi terkini.</li><li>Siapkan rute alternatif, titik kumpul, waktu lapor, dan rencana jika tersesat.</li></ol>
+          <div class="caution"><b>Catatan lapangan</b><p>Peta bisa tidak mutakhir atau kurang detail. Konfirmasikan kondisi aktual melalui pembina/pemandu, pengelola kawasan, dan sumber resmi. Jangan memasuki area tertutup atau berbahaya hanya karena terlihat dapat dilalui pada peta.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="kompas">
+      <div class="section-kicker">03 / ARAH & ORIENTASI</div>
+      <div class="dark-heading"><div><h2>Kompas: alat bantu arah</h2><p>Kompas menunjukkan arah utara magnetis. Hasilnya harus dipahami bersama jenis kompas, kondisi sekitar, dan referensi utara yang dipakai peta.</p></div><div class="compass-mini"><span>N</span><i></i></div></div>
+      <div class="dark-cards">
+        <article><span class="card-no">01</span><h3>Kompas magnetik</h3><p>Jarum magnetik cenderung sejajar dengan medan magnet bumi. Kompas bidik/prisma membantu membidik objek dan membaca sudut arah.</p></article>
+        <article><span class="card-no">02</span><h3>Kompas dasar / baseplate</h3><p>Umumnya memiliki rumah kompas berputar, panah orientasi, garis orientasi, skala, dan pelat transparan untuk bekerja dengan peta.</p></article>
+        <article><span class="card-no">03</span><h3>Kompas malam</h3><p>Kompas dengan penanda bercahaya membantu pembacaan dalam cahaya rendah. Tetap gunakan penerangan yang aman dan jangan mengandalkan penglihatan malam saja.</p></article>
+      </div>
+      <div class="article-content dark-article">
+        <h3>Bagian kompas bidik yang umum</h3>
+        <div class="parts-grid"><div><b>Visir / alat bidik</b><span>Mengarahkan bidikan ke objek.</span></div><div><b>Garis bidik</b><span>Garis acuan untuk mengarah ke sasaran.</span></div><div><b>Skala derajat</b><span>Membaca sudut arah 0°–360°.</span></div><div><b>Jarum magnetik</b><span>Menunjukkan arah utara magnetis.</span></div><div><b>Kaca/prisma pembaca</b><span>Membantu membaca skala pada model tertentu.</span></div><div><b>Penutup & badan</b><span>Melindungi bagian dan membantu pegangan.</span></div></div>
+        <h3>Arah mata angin dan azimut</h3>
+        <p>Azimut adalah sudut arah yang diukur searah jarum jam dari utara acuan, umumnya dinyatakan 0° sampai kurang dari 360°.</p>
+        <div class="azimuth-wheel"><div class="az-n">0° / 360°<small>UTARA</small></div><div class="az-e">90°<small>TIMUR</small></div><div class="az-s">180°<small>SELATAN</small></div><div class="az-w">270°<small>BARAT</small></div><div class="az-center">AZIMUT<br><b>0°–360°</b></div></div>
+        <p>Contoh arah antara: timur laut sekitar 45°, tenggara 135°, barat daya 225°, dan barat laut 315°. Ini adalah arah kompas ideal; pembacaan nyata mengikuti alat dan prosedur yang digunakan.</p>
+        <h3>Back azimuth (azimut balik)</h3>
+        <div class="formula-card formula-dark"><small>ATURAN HITUNG</small><div>Jika azimut &lt; 180°: tambah 180°<br>Jika azimut ≥ 180°: kurangi 180°</div><p>Contoh: azimut 70° → back azimuth 250°. Azimut 225° → back azimuth 45°.</p></div>
+        <h3>Orientasi peta</h3>
+        <ol><li>Letakkan peta pada permukaan yang cukup datar dan aman.</li><li>Identifikasi arah utara pada peta, serta ketahui apakah referensinya utara grid, utara sejati, atau utara magnetis.</li><li>Gunakan kompas sesuai petunjuk alat dan koreksi yang tercantum pada peta bila diperlukan.</li><li>Putar peta hingga arah utara peta selaras dengan arah utara acuan di lapangan.</li><li>Cocokkan beberapa tanda medan sekaligus—misalnya punggungan, sungai, jalan, dan puncak—sebelum menentukan posisi.</li></ol>
+        <h3>Gangguan dan kesalahan umum</h3>
+        <ul><li>Hindari membaca kompas terlalu dekat dengan benda logam, magnet, kendaraan, kabel berarus, atau perangkat yang dapat mengganggu jarum.</li><li>Jangan menaruh ponsel atau benda bermagnet di atas kompas saat membaca arah.</li><li>Pastikan alat stabil, skala terbaca, dan tubuh tidak menghalangi proses pembidikan.</li><li>Periksa apakah sudut yang dibaca adalah azimut atau back azimuth; jangan tertukar.</li><li>Utara magnetis tidak selalu sama dengan utara sejati atau utara grid. Gunakan informasi koreksi pada peta jika tersedia dan sesuai kebutuhan.</li></ul>
+        <div class="caution caution-dark"><b>Latihan siang dan malam</b><p>Latihan kompas malam dilakukan di lokasi yang disetujui, dengan pembina/pemandu, sistem berpasangan, lampu, batas area yang jelas, dan prosedur komunikasi. Jangan melakukan penjelajahan malam sendirian.</p></div>
+      </div>
+    </section>
+
+    <section class="section content-section" id="teknik">
+      <div class="section-kicker">04 / MENENTUKAN POSISI</div>
+      <div class="content-layout">
+        <aside class="side-note side-green"><span class="side-number">B</span><h3>Resection &<br>intersection</h3><p>Dua teknik penentuan posisi yang memakai tanda medan, pengukuran arah, dan peta.</p><div class="note-chip">KUNCI: TITIK ACUAN YANG TEPAT</div></aside>
+        <div class="article-content">
+          <h2>Bedakan tujuan kedua teknik</h2>
+          <div class="compare-cards"><div><span class="compare-tag">RESECTION</span><h3>Menentukan posisi diri</h3><p>Kamu berada di suatu tempat yang belum diketahui posisinya pada peta. Kamu membidik tanda medan yang juga dapat dikenali pada peta, lalu memakai garis arah balik untuk memperkirakan titik tempatmu berdiri.</p><div class="mini-steps"><span>01 Kenali tanda medan</span><span>02 Bidik dan catat azimut</span><span>03 Hitung arah balik</span><span>04 Tarik garis di peta</span></div></div><div><span class="compare-tag compare-orange">INTERSECTION</span><h3>Menentukan posisi sasaran</h3><p>Posisi pengamat diketahui atau dapat ditentukan. Dari dua atau lebih titik pengamatan yang diketahui, arah ke sasaran diukur; perpotongan garis arah pada peta memperkirakan posisi sasaran.</p><div class="mini-steps"><span>01 Tentukan titik pengamatan</span><span>02 Bidik sasaran dari tiap titik</span><span>03 Plot garis arah</span><span>04 Periksa titik perpotongan</span></div></div></div>
+          <h3>Prinsip kerja resection</h3>
+          <ol><li>Orientasikan peta dan pilih sedikitnya dua tanda medan yang jelas, berjauhan, serta dapat dikenali pada peta dan lapangan.</li><li>Dari lokasi pengamat, bidik tiap tanda medan dan catat azimut sesuai prosedur kompas.</li><li>Tentukan back azimuth dari tiap hasil bidikan. Pastikan referensi utara dan koreksi yang diperlukan konsisten.</li><li>Dari tanda medan yang sesuai di peta, tarik garis ke arah balik hasil bidikan.</li><li>Perpotongan garis memperkirakan posisi pengamat. Jika membentuk segitiga kesalahan yang lebar, periksa ulang bacaan, identifikasi tanda, dan orientasi peta.</li></ol>
+          <h3>Prinsip kerja intersection</h3>
+          <ol><li>Pilih sasaran yang terlihat jelas dan dapat diidentifikasi di lapangan serta pada peta.</li><li>Tentukan dua titik pengamatan yang diketahui posisinya pada peta.</li><li>Dari masing-masing titik, ukur azimut ke sasaran dan catat dengan teliti.</li><li>Plot garis arah dari masing-masing titik pengamatan menggunakan sistem referensi yang sama.</li><li>Perpotongan garis memperkirakan lokasi sasaran. Garis yang hampir sejajar membuat hasil kurang teliti; pilih sudut potong yang lebih baik jika aman dan memungkinkan.</li></ol>
+          <div class="formula-card"><small>CONTOH BACK AZIMUTH</small><div>Bidikan ke menara = 146° → arah balik = 326°</div><p>Jika tanda medan menara sudah dikenali di peta, garis dari menara pada arah 326° dapat menjadi salah satu garis bantu resection. Contoh angka ini untuk latihan, bukan petunjuk menuju lokasi nyata.</p></div>
+          <h3>Sumber ketidakakuratan</h3>
+          <ul><li>Tanda medan salah dikenali atau berpindah/berubah sejak peta dibuat.</li><li>Bidikan kompas tidak stabil, ada gangguan magnetik, atau pembacaan skala keliru.</li><li>Peta tidak terorientasi dengan benar atau koreksi utara tidak diperhitungkan.</li><li>Garis terlalu berdekatan/sudut potong terlalu kecil, sehingga titik perpotongan sulit ditentukan.</li><li>Ketebalan garis dan skala peta membatasi presisi hasil.</li></ul>
+          <div class="caution"><b>Catatan istilah</b><p>Dalam beberapa modul Indonesia, istilah “resection/mengikat ke depan” dan “intersection/mengikat ke belakang” digunakan. Pastikan istilah serta prosedur yang dipakai sama dengan panduan pembina atau modul SKK di pangkalan, karena penamaan bisa berbeda pada sebagian bahan ajar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gps-section" id="gps">
+      <div class="section-kicker">05 / NAVIGASI DIGITAL</div>
+      <div class="gps-heading"><div><h2>GPS: kuat sebagai pelengkap</h2><p>Global Positioning System adalah salah satu sistem satelit navigasi global. Penerima GPS menghitung posisi berdasarkan sinyal satelit; ponsel modern bisa memakai beberapa sistem satelit sekaligus.</p></div><div class="gps-orbit"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="satellite">✦</div><div class="gps-dot"></div></div></div>
+      <div class="gps-grid">
+        <article><span>01</span><h3>Koordinat & posisi</h3><p>Periksa format koordinat, datum, dan satuan yang digunakan. Cocokkan koordinat di perangkat dengan format yang diminta peta atau tim.</p></article>
+        <article><span>02</span><h3>Waypoint</h3><p>Titik lokasi tersimpan seperti titik awal, persimpangan, pos, titik kumpul, atau tujuan yang telah disetujui.</p></article>
+        <article><span>03</span><h3>Track / rekam jejak</h3><p>Catatan lintasan yang ditempuh. Berguna untuk meninjau perjalanan, tetapi bukan jaminan bahwa jalur aman untuk dilalui kembali.</p></article>
+        <article><span>04</span><h3>Trackback & rute</h3><p>Fitur yang dapat membantu mengikuti jejak/rute tersimpan. Pahami perangkat lebih dulu dan tetap amati kondisi medan nyata.</p></article>
+      </div>
+      <div class="gps-bottom"><div><h3>Faktor yang memengaruhi akurasi</h3><ul><li>Halangan langit seperti tebing, kanopi rapat, atau bangunan.</li><li>Geometri satelit dan kondisi atmosfer.</li><li>Kualitas perangkat dan pengaturan sistem koordinat.</li><li>Pantulan sinyal serta kondisi lingkungan sekitar.</li></ul></div><div><h3>Checklist sebelum berangkat</h3><ul class="checklist"><li>Isi daya perangkat dan bawa sumber daya cadangan yang sesuai.</li><li>Unduh peta offline bila tersedia dan legal digunakan.</li><li>Simpan titik awal, tujuan, titik kumpul, serta kontak darurat.</li><li>Uji baca koordinat dan kompas sebelum masuk medan.</li><li>Jangan mengandalkan GPS sebagai satu-satunya alat.</li></ul></div></div>
+      <div class="caution"><b>Privasi lokasi</b><p>Koordinat rumah, sekolah, tempat berkumpul, atau lokasi anggota tim bisa bersifat pribadi. Bagikan hanya kepada orang yang berwenang dan jangan mengunggah data lokasi sensitif secara terbuka.</p></div>
+    </section>
+
+    <section class="section practice-section" id="praktik">
+      <div class="section-kicker">06 / PRAKTIK TERARAH</div>
+      <h2>Dari teori ke keterampilan lapangan</h2>
+      <p class="section-intro">Gunakan latihan ini bersama pembina atau instruktur di area yang aman, berizin, dan sudah ditentukan.</p>
+      <div class="practice-list">
+        <details open><summary><span>01</span> Orientasi peta dan medan <b>＋</b></summary><div class="details-body"><p><b>Tujuan:</b> menghubungkan simbol peta dengan objek nyata.</p><p><b>Perlengkapan:</b> peta yang sesuai, kompas, pensil, penggaris, papan alas, dan catatan.</p><p><b>Langkah:</b> pilih area latihan; kenali beberapa objek yang aman dan jelas; orientasikan peta; tunjukkan objek yang sama pada peta dan lapangan; catat ketidakcocokan.</p><p><b>Evaluasi:</b> peserta dapat menjelaskan alasan memilih objek dan menyebutkan batas ketelitian peta.</p></div></details>
+        <details><summary><span>02</span> Mengukur azimut dan back azimuth <b>＋</b></summary><div class="details-body"><p><b>Tujuan:</b> membaca sudut arah dan menghitung arah balik.</p><p><b>Langkah:</b> di tempat terbuka dan aman, instruktur menentukan objek latihan; peserta mengukur sudut mengikuti manual kompas; hitung back azimuth; bandingkan hasil antarpeserta dan diskusikan sumber selisih.</p><p><b>Evaluasi:</b> peserta tidak tertukar antara arah pergi dan arah balik serta mampu menjelaskan gangguan magnetik.</p></div></details>
+        <details><summary><span>03</span> Skala, jarak, dan kontur <b>＋</b></summary><div class="details-body"><p><b>Tujuan:</b> memperkirakan jarak dan perubahan ketinggian.</p><p><b>Langkah:</b> ukur ruas contoh pada peta; konversikan dengan skala; identifikasi interval kontur dari legenda; tentukan bagian rute yang lebih curam dan jelaskan keterbatasan estimasi jarak.</p><p><b>Evaluasi:</b> satuan konsisten, perhitungan ditulis, dan peserta membedakan jarak lurus dari jarak tempuh.</p></div></details>
+        <details><summary><span>04</span> Simulasi resection / intersection <b>＋</b></summary><div class="details-body"><p><b>Tujuan:</b> memahami geometri penentuan posisi.</p><p><b>Langkah:</b> instruktur memilih tanda medan yang aman; peserta membuat plot pada peta latihan; kelompok lain memeriksa apakah garis, sudut, dan referensi utara konsisten.</p><p><b>Evaluasi:</b> peserta dapat menjelaskan apa yang diketahui, apa yang dicari, dan mengapa hasil bisa meleset.</p></div></details>
+        <details><summary><span>05</span> GPS dan koordinat <b>＋</b></summary><div class="details-body"><p><b>Tujuan:</b> membaca dan melaporkan koordinat dengan format yang tepat.</p><p><b>Langkah:</b> gunakan titik latihan non-sensitif; catat format koordinat; bandingkan dengan peta dan perangkat lain; bahas selisih serta kondisi penerimaan sinyal.</p><p><b>Evaluasi:</b> peserta menyebutkan format koordinat, tidak mengarang presisi, dan dapat menjelaskan mengapa GPS tetap perlu diverifikasi.</p></div></details>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="latihan">
+      <div class="section-kicker">07 / UJI PEMAHAMAN</div>
+      <div class="quiz-head"><div><h2>Uji pengetahuan NAVRAT</h2><p>10 soal pilihan ganda. Pilih satu jawaban terbaik di setiap soal, lalu periksa hasil dan pembahasannya.</p></div><div class="quiz-badge">QUIZ<br><b>01—10</b></div></div>
+      <form id="quizForm" class="quiz-form">
+        <div id="questions"></div>
+        <div class="quiz-actions"><button class="btn btn-primary" type="submit">Periksa jawaban <span>→</span></button><button class="btn btn-ghost" type="button" id="resetQuiz">Ulangi kuis</button></div>
+      </form>
+      <div id="quizResult" class="quiz-result" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="section field-card-section">
+      <div class="field-card"><div><div class="section-kicker">08 / PRINSIP KESELAMATAN</div><h2>Navigasi yang baik adalah navigasi yang aman.</h2><p>Jangan biarkan target latihan mengalahkan penilaian risiko. Rute harus sesuai kemampuan anggota, cuaca, izin, dan arahan pembina.</p></div><ul><li>Berangkat bersama tim dan tetapkan pemimpin serta penyapu belakang.</li><li>Beritahu rencana, rute, dan waktu kembali kepada penanggung jawab.</li><li>Bawa air, perlengkapan yang sesuai, peta, kompas, alat komunikasi, dan P3K.</li><li>Jika ragu, berhenti di tempat aman, evaluasi, komunikasikan, dan ikuti prosedur pembina.</li><li>Jangan masuk area terlarang, mendekati tebing/arus deras, atau mencoba rute berisiko demi latihan.</li></ul><div class="field-stamp">SAFETY<br>FIRST</div></div>
+    </section>
+
+    <section class="section sources-section" id="sumber">
+      <div class="section-kicker">09 / REFERENSI & SUMBER</div>
+      <h2>Rujukan untuk belajar lebih lanjut</h2>
+      <p class="section-intro">Materi di halaman ini merupakan rangkuman edukatif. Untuk penilaian SKK, gunakan buku/petunjuk resmi terbaru yang berlaku di pangkalan dan arahan instruktur.</p>
+      <div class="source-list">
+        <a href="https://pramuka.id/pendalaman-materi-krida-navigasi-darat-instruktur-saka-simulasikan-pencarian-lokasi-helikopter-jatuh/" target="_blank" rel="noopener"><span class="source-type">PRAKTIK SAKA</span><div><b>Warta Pramuka — Pendalaman Materi Krida Navigasi Darat</b><p>Contoh pembinaan Saka Wira Kartika yang membahas peta dan medan, kompas siang/malam, resection, intersection, dan GPS.</p></div><span class="source-arrow">↗</span></a>
+        <a href="https://kodim0804.tni-ad.mil.id/2023/01/pramuka-saka-wira-kartika-koramil-0804-08-barat-permahir-kemampuan-peta-dan-kompas/" target="_blank" rel="noopener"><span class="source-type">TNI AD</span><div><b>Kodim 0804/Magetan — Peta dan Kompas Saka Wira Kartika</b><p>Laporan pembinaan peta dan kompas untuk anggota Saka Wira Kartika.</p></div><span class="source-arrow">↗</span></a>
+        <a href="https://pramuka.or.id/satuan-karya-pramuka/" target="_blank" rel="noopener"><span class="source-type">KWARNAS</span><div><b>Kwartir Nasional Gerakan Pramuka — Satuan Karya Pramuka</b><p>Informasi umum Satuan Karya dan bidang Saka Wira Kartika sebagai bidang matra darat.</p></div><span class="source-arrow">↗</span></a>
+        <a href="https://etangguh.bnpb.go.id/wp-content/uploads/2021/07/Kurikulum-Diklat-Navigasi-dan-Pemetaan.pdf" target="_blank" rel="noopener"><span class="source-type">BNPB</span><div><b>Kurikulum Diklat Navigasi dan Pemetaan</b><p>Rujukan pembelajaran umum tentang peta, orientasi, kompas, tanda medan, dan alat navigasi.</p></div><span class="source-arrow">↗</span></a>
+        <a href="https://www.basarnas.go.id/storage/files/34/Bina%20Potensi/SAR%20Pemula%20%28SMP%29.pdf" target="_blank" rel="noopener"><span class="source-type">BASARNAS</span><div><b>Basarnas — SAR di Gunung dan Hutan</b><p>Materi dasar terkait fungsi peta dalam perencanaan, pengendalian, serta dukungan operasi pencarian dan pertolongan.</p></div><span class="source-arrow">↗</span></a>
+        <a href="https://pramuka.or.id/files/document/Panduan-Diklat-Instruktur-Muda.pdf" target="_blank" rel="noopener"><span class="source-type">KWARNAS</span><div><b>Panduan Diklat Instruktur Muda</b><p>Referensi kepramukaan mengenai orientering, peta topografi, kompas, altimeter, dan penjelajahan.</p></div><span class="source-arrow">↗</span></a>
+      </div>
+      <p class="source-note">Catatan: tautan dan dokumen dapat berubah. Website ini bukan pengganti pelatihan lapangan, manual alat, peta resmi, atau petunjuk SKK terbaru. Periksa kembali keaslian dan versi dokumen sebelum dijadikan dasar ujian.</p>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#beranda"><span class="brand-mark">N<span>↗</span></span><span><strong>NAVRAT</strong><small>FIELD LEARNING HUB</small></span></a><p>Belajar navigasi dengan teliti, bertanggung jawab, dan mengutamakan keselamatan.</p><a href="#beranda" class="back-top">Kembali ke atas ↑</a><small class="copyright">Materi edukasi • Dibuat untuk pembelajaran Pramuka Saka Wira Kartika</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
